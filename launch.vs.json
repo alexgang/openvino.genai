@@ -1,0 +1,12 @@
+{
+	"version": "0.2.1",
+	"defaults": {},
+	"configurations": [
+		{
+			"name": "Debug",
+			"project": "GenAI",
+			"configurationType": "Default",
+			"args": [ "..\\..\\..\\..\\..\\..\\ChatGLM3_C++_demo\\model\\GPTQ_INT4-FP16\\openvino_model.xml", "..\\..\\..\\..\\..\\..\\ChatGLM3_C++_demo\\model\\GPTQ_INT4-FP16\\tokenizer.xml", "..\\..\\..\\..\\..\\..\\ChatGLM3_C++_demo\\model\\GPTQ_INT4-FP16\\detokenizer.xml", "GPU", "hi" ]
+		}
+	]
+}

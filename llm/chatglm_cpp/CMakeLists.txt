@@ -7,6 +7,8 @@ target_link_libraries(chatglm PRIVATE openvino::runtime)
 set_target_properties(chatglm PROPERTIES CXX_STANDARD 17)
 set_target_properties(chatglm PROPERTIES CXX_STANDARD_REQUIRED ON)
 if(MSVC)
+    add_definitions("/wd4267 /wd4244 /wd4305 /Zc:strictStrings /utf-8")
+    add_definitions(-DUNICODE)
     target_compile_options(
         chatglm PRIVATE
         /Wall  # Display all warnings

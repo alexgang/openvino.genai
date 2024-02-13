@@ -6,6 +6,7 @@ project(GenAI)
 
 list(APPEND CUSTOM_OPERATIONS tokenizer)
 add_subdirectory(thirdparty/openvino_contrib/modules/custom_operations/)  # Build user_ov_extensions
+add_subdirectory(thirdparty/pybind11)
 if(NOT MSVC)  # # Disable the warning from user_ov_extensions
     target_compile_options(sentencepiece-static PRIVATE -Wno-stringop-overflow)
 endif()
@@ -17,3 +18,11 @@ target_link_libraries(llm PRIVATE user_ov_extensions)
 add_subdirectory(llm/chatglm_cpp)
 target_compile_definitions(chatglm PRIVATE USER_OV_EXTENSIONS_PATH=\"$<TARGET_FILE:user_ov_extensions>\")
 target_link_libraries(chatglm PRIVATE user_ov_extensions)
+
+add_subdirectory(llm/chatglm_main)
+target_compile_definitions(chatglm_main PRIVATE USER_OV_EXTENSIONS_PATH=\"$<TARGET_FILE:user_ov_extensions>\")
+target_link_libraries(chatglm_main PRIVATE user_ov_extensions)
+
+target_compile_definitions(chatglm_func PRIVATE USER_OV_EXTENSIONS_PATH=\"$<TARGET_FILE:user_ov_extensions>\")
+target_link_libraries(chatglm_func PRIVATE user_ov_extensions)
+
