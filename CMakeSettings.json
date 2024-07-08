@@ -13,7 +13,7 @@
       "variables": [
         {
           "name": "OpenVINO_DIR",
-          "value": "C:\\Program Files (x86)\\Intel\\openvino_2024.0.0\\runtime\\cmake",
+          "value": "C:\\Program Files (x86)\\Intel\\openvino\\runtime\\cmake",
           "type": "PATH"
         },
         {
@@ -23,13 +23,18 @@
         },
         {
           "name": "TBB_DIR",
-          "value": "C:\\Program Files (x86)\\Intel\\openvino_2024.0.0\\runtime\\3rdparty\\tbb\\lib\\cmake\\TBB",
+          "value": "C:\\Program Files (x86)\\Intel\\openvino\\runtime\\3rdparty\\tbb\\lib\\cmake\\TBB",
           "type": "PATH"
         },
         {
           "name": "BUILD_TESTING",
           "value": "False",
           "type": "BOOL"
+        },
+        {
+          "name": "pybind11_DIR",
+          "value": "C:/Xiaowei/Xiaowei AI 2023/demo/openvino.genai/thirdparty/pybind11",
+          "type": "PATH"
         }
       ]
     },
@@ -45,13 +50,18 @@
       "variables": [
         {
           "name": "OpenVINO_DIR",
-          "value": "C:\\Program Files (x86)\\Intel\\openvino_2024.0.0\\runtime\\cmake",
+          "value": "C:\\Program Files (x86)\\Intel\\openvino\\runtime\\cmake",
           "type": "PATH"
         },
         {
           "name": "TBB_DIR",
-          "value": "C:\\Program Files (x86)\\Intel\\openvino_2024.0.0\\runtime\\3rdparty\\tbb\\lib\\cmake\\TBB",
+          "value": "C:\\Program Files (x86)\\Intel\\openvino\\runtime\\3rdparty\\tbb\\lib\\cmake\\TBB",
           "type": "PATH"
+        },
+        {
+          "name": "PYBIND11_PYTHON_VERSION",
+          "value": "3.9",
+          "type": "STRING"
         },
         {
           "name": "OpenCV_DIR",

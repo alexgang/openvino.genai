@@ -1484,7 +1484,8 @@ void Pipeline::chat_pystream(const std::vector<ChatMessage>& messages, const Gen
     ChatMessage output = chatglm3_tokenizer->decode_message(new_output_ids);
     std::cout << "prompt_tokens: " << prompt_tokens << "\n";
     std::cout << "completion_tokens: " << completion_tokens << "\n";
-    std::cout << "output: " << output.content << "\n";
+    //std::cout << "output: " << output.content << "\n";
+    std::cout << "\n" << perf_streamer->to_string() << "\n\n";
 }
 
 } // namespace chatglm
